@@ -1,7 +1,8 @@
 const googleCloud = require("../config/storage.js");
 const util = require("util");
-const bucketName = process.env.BUCKET_NAME;
-const bucket = googleCloud.bucket(bucketName);
+const bucketName = "staging_product";
+
+const bucket = googleCloud.bucket(String(bucketName));
 
 const { format } = util;
 
